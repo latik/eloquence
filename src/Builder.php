@@ -560,7 +560,7 @@ class Builder extends HookableBuilder
      * @param string $modelTable
      * @return array
      */
-    protected function getQualifiedColumnsName($modelTable): array
+    protected function getQualifiedColumnsName($modelTable)
     {
         return collect($this->model->getConnection()->getSchemaBuilder()->getColumnListing($modelTable))
             ->map(function ($item) use ($modelTable) {
